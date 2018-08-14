@@ -25,6 +25,6 @@ public class EndpointAsyncTaskTest {
         EndpointAsyncTask testJoke = new EndpointAsyncTask(activityActivityTestRule.getActivity());
         testJoke.execute();
         String joke = testJoke.get();
-        assertFalse(TextUtils.isEmpty(joke));
+        assertFalse((joke.toLowerCase()).equals("error"));
     }
 }

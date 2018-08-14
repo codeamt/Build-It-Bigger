@@ -1,12 +1,7 @@
 package builditbigger;
 
-import android.content.Context;
 import android.os.AsyncTask;
-import android.view.View;
-import android.widget.Button;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
@@ -47,7 +42,8 @@ public class EndpointAsyncTask extends AsyncTask<Void, Void, String> {
         try {
             return myApi.fetchJoke().execute().getData();
         } catch (IOException e) {
-            return e.getMessage();
+            String error = "error";
+            return error;
         }
 
     }

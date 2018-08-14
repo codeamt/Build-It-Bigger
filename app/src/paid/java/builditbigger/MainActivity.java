@@ -7,13 +7,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.example.droidjokes.DroidJokes;
-import com.example.javajokes.Joker;
+import com.example.droidjokes.DroidJokesActivity;
 import com.udacity.gradle.builditbigger.R;
 
 
 public class MainActivity extends AppCompatActivity implements EndpointAsyncTask.Callback {
-    Joker joker = new Joker();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,13 +45,11 @@ public class MainActivity extends AppCompatActivity implements EndpointAsyncTask
     public void tellJoke(View view) {
         //grab joke from java lib
         new EndpointAsyncTask(this).execute();
-
-        //Toast.makeText(this, joke, Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onFinished(String result) {
-        Intent jokeIntent = new Intent(this, DroidJokes.class);
+        Intent jokeIntent = new Intent(this, DroidJokesActivity.class);
         jokeIntent.putExtra(Intent.EXTRA_TEXT, result);
         startActivity(jokeIntent);
     }

@@ -3,6 +3,6 @@
     <application
         android:label="@string/app_name"
         android:supportsRtl="true">
-        <activity android:name=".DroidJokes"/>
+        <activity android:name=".DroidJokesActivity"/>
     </application>
 </manifest>

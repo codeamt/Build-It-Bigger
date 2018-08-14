@@ -52,7 +52,7 @@ dependencies {
     implementation project(':javaJokes')
     implementation project(':droidjokes')
     implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation('com.google.android.gms:play-services-ads:15.0.1') {
+    freeImplementation('com.google.android.gms:play-services-ads:15.0.1') {
         exclude module: 'guava-jdk5'
     }
     implementation('com.google.api-client:google-api-client:1.23.0') {

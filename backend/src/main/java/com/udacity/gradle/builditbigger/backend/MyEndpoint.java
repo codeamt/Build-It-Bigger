@@ -1,12 +1,9 @@
 package com.udacity.gradle.builditbigger.backend;
 
+import com.example.javajokes.Joker;
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.ApiNamespace;
-
-import javax.inject.Named;
-
-import com.example.javajokes.Joker;
 
 /** An endpoint class we are exposing */
 @Api(
